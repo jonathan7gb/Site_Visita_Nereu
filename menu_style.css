@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+
+:root{
+    --primary-color: #EBFDCB;
+    --background-color: #111111;
+    --white: #FFFFFF;
+    --green: #27AE60;
+    --red: #EB5757;
+    --font-darker-grotesque: "Darker Grotesque", sans-serif;
+    --font-montserrat: "Montserrat", sans-serif;
+    --font-lato: "Lato", sans-serif;
+    --font-cinzel: "Cinzel", serif;
+    --font-size-pages-titles: 36px;
+    --font-16px-1rem: 1rem;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+ul{
+    list-style: none;
+}
+
+body{
+    background-color: var(--background-color);
+}
+
+html{
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+button{
+    background-color: transparent;
+    border: 0;
+}
+
+.menu-mobile{
+    padding: 1rem 1.5rem 1rem 3rem;
+}
+
+.container-menu-mobile{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5rem;
+}
+
+.class-btnClose{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.links-list ul{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.links-list ul li{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.links-list ul li a{
+    color: var(--primary-color);
+    text-decoration: none;
+    font-family: var(--font-montserrat);
+    font-size: 2.8rem;
+    font-weight: 200;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+#menuMobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    overflow: hidden;
+    background-color: var(--background-color);
+}

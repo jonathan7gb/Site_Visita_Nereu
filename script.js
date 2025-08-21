@@ -1,20 +1,42 @@
-const btnLerMais = document.getElementById("LeiaMaisButton")
-const btnLerMenos = document.getElementById("LeiaMenosButton")
+document.addEventListener('DOMContentLoaded', function() {
+    const menuMobile = document.getElementById('menuMobile');
+    const hamburgerMenuIcon = document.getElementById('menuHamburger');
+    const btnClose = document.getElementById('btnClose');
 
-const textHidden = document.getElementById("text-hidden")
-// Garante que o texto oculto esteja escondido ao carregar
-textHidden.style.display = "none";
+    if (menuMobile && hamburgerMenuIcon && btnClose) {
+        hamburgerMenuIcon.addEventListener('click', function(e) {
+            e.preventDefault();
+            menuMobile.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        });
+        btnClose.addEventListener('click', function(e) {
+            e.preventDefault();
+            menuMobile.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+    }
+});
 
-function esconderTexto(){
-    if(textHidden.style.display === "none"){
+// Função genérica para todos os blocos Leia Mais/Ler Menos
+function setupLeiaMaisMenos(btnMaisId, btnMenosId, hiddenId) {
+    const btnMais = document.getElementById(btnMaisId);
+    const btnMenos = document.getElementById(btnMenosId);
+    const textHidden = document.getElementById(hiddenId);
+    if (!btnMais || !btnMenos || !textHidden) return;
+    textHidden.style.display = "none";
+    btnMais.addEventListener('click', function() {
         textHidden.style.display = "flex";
         textHidden.style.flexDirection = "column";
-        btnLerMais.style.display = "none"
-    }else{
-        btnLerMais.style.display = "block"
+        btnMais.style.display = "none";
+    });
+    btnMenos.addEventListener('click', function() {
         textHidden.style.display = "none";
-    }
+        btnMais.style.display = "inline-block";
+    });
 }
 
-btnLerMais.addEventListener('click', esconderTexto)
-btnLerMenos.addEventListener('click', esconderTexto)
+// Chama para cada bloco
+setupLeiaMaisMenos("LeiaMaisButton", "LeiaMenosButton", "text-hidden");
+setupLeiaMaisMenos("LeiaMaisButton2", "LeiaMenosButton2", "text-hidden2");
+setupLeiaMaisMenos("LeiaMaisButton3", "LeiaMenosButton3", "text-hidden3");
+setupLeiaMaisMenos("LeiaMaisButton4", "LeiaMenosButton4", "text-hidden4");

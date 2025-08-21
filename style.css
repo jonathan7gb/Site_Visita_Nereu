@@ -5,7 +5,7 @@
 
 :root{
     --primary-color: #EBFDCB;
-    --background-color: #171717;
+    --background-color: #111111;
     --white: #FFFFFF;
     --green: #27AE60;
     --red: #EB5757;
@@ -59,6 +59,10 @@ header .container-header{
 }
 
 .navbar-desktop{
+    display: none;
+}
+
+.menu-mobile{
     display: none;
 }
 
@@ -162,16 +166,15 @@ header .container-header{
 
 .container-cards .card .card-text h3{
     font-size: 24px;
-    font-weight: 800;
+    font-weight: 700;
     letter-spacing: 1px;
-    font-family: var(--font-darker-grotesque);
+    font-family: var(--font-montserrat);
 }
 
 .container-cards .card .card-text p{
     font-size: 16px;
     font-weight: 200;
     letter-spacing: 1px;
-    font-family: var(--font-darker-grotesque1);
 }
 
 #cardGaleria{
@@ -284,7 +287,7 @@ header .container-header{
 }
 
 .problema{
-    padding: 3rem 1rem !important;
+    padding: 3rem 2.5rem !important;
 }
 
 .container-problema{
@@ -292,42 +295,79 @@ header .container-header{
     font-family: var(--font-darker-grotesque);
 }
 
-.container-problema h2{
+
+.hipoteses{
+    background-color: var(--primary-color);
+    padding: 3rem 2.5rem !important;
+}
+
+.container-hipoteses{
+    font-family: var(--font-darker-grotesque);
+    color: black;
+}
+
+.objetivos{
+    padding: 3rem 2.5rem !important;
+}
+
+.container-objetivos{
+    color: var(--white);
+    font-family: var(--font-darker-grotesque);
+}
+
+.justificativa{
+    background-color: var(--primary-color);
+    padding: 3rem 2.5rem !important;
+}
+
+.container-justificativa{
+    font-family: var(--font-darker-grotesque);
+    color: black;
+}
+
+.container-problema h2, 
+.container-hipoteses h2,
+.container-objetivos h2,
+.container-justificativa h2{
     text-align: center;
     margin-bottom: 1rem;
 }
 
-.container-problema p{
+.container-problema p,
+.container-hipoteses p,
+.container-objetivos p,
+.container-justificativa p{
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1rem;
     text-align: justify;
     margin-bottom: 0.5rem;
 }
 
-#text-hidden{
+
+#text-hidden, #text-hidden2, #text-hidden3, #text-hidden4{
     display: none;
 }
 
-#LeiaMaisButton{
+
+#LeiaMaisButton, #LeiaMenosButton, #LeiaMaisButton3, #LeiaMenosButton3{
     color: var(--white);
     text-decoration: underline;
     background-color: transparent;
     border: 0;
     font-family: var(--font-darker-grotesque);
     font-size: var(--font-16px-1rem);
+    margin-top: 0.5rem;
 }
 
-#LeiaMenosButton{
-    color: var(--white);
+#LeiaMaisButton2, #LeiaMenosButton2, #LeiaMaisButton4, #LeiaMenosButton4{
+    color: black;
     text-decoration: underline;
     background-color: transparent;
     border: 0;
     font-family: var(--font-darker-grotesque);
     font-size: var(--font-16px-1rem);
+    margin-top: 0.5rem;
 }
-
-
-
 
 
 
@@ -398,10 +438,12 @@ header .container-header{
     .navbar-desktop{
         display: flex;
     }
-
+    
     .navbar-desktop ul{
         display: flex;
         flex-direction: row;
+        justify-content: center;
+        align-items: center;
         gap: 3rem;
         color: var(--white);
     }
@@ -409,9 +451,41 @@ header .container-header{
     .navbar-desktop ul li a{
         color: var(--white);
         text-decoration: none;
-        font-family: var(--font-darker-grotesque);
-        font-size: 1.2rem;
-        font-weight: 500;
+        font-family: var(--font-montserrat);
+        font-size: 1rem;
+        font-weight: 400;
+    }
+    
+    .navbar-desktop ul li {
+        font-size: 2rem;
+        color: #ffffff;
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+        
+    .navbar-desktop ul li::after,
+    .navbar-desktop ul li::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(to right, #ffffff, var(--primary-color));
+        bottom: -5px;
+        left: 0;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.4s ease-out;
+    }
+        
+    .navbar-desktop ul li::before {
+        top: -5px;
+        transform-origin: left;
+    }
+     
+    .navbar-desktop ul li:hover::after,
+    .navbar-desktop ul li:hover::before {
+        transform: scaleX(1);
     }
 
     .background-hero-header{
