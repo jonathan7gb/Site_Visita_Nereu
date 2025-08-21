@@ -167,12 +167,12 @@ header .container-header{
 }
 
 #cardGaleria{
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.9)), url('./images/IMG_2728.HEIC');
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('./images/IMG_2728.HEIC');
     background-position: center 25%;
     background-size: cover;
     background-repeat: no-repeat;
     height: 25vh;
-    transition: all 1s ease;
+    transition: all 0.7s ease;
 }
 
 .overlay-galeria{
@@ -185,15 +185,16 @@ header .container-header{
 
 .overlay-galeria img{
     width: 100%;
+    z-index: -999;
 }
 
 #cardViagem{
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('./images/FullSizeRender\(1\).heic');
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('./images/FullSizeRender\(1\).heic');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     height: 25vh;
-    transition: all 1s ease;
+    transition: all 0.7s ease;
 }
 
 .overlay-viagem{
@@ -213,29 +214,55 @@ header .container-header{
 .overlay-final img {
     width: 100%;
     display: block;
+    z-index: -999;
 }
 
 
 #cardTrabalho{
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('./images/IMG_6319.heic');
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('./images/IMG_6319.heic');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     height: 25vh;
-    transition: all 1s ease;
+    transition: all 0.7s ease;
 }
 
 #cardEquipe{
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('./images/IMG_2728.HEIC');
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('./images/IMG_2728.HEIC');
     background-position: center 25%;
     background-size: cover;
     background-repeat: no-repeat;
     height: 25vh;
-    transition: all 1s ease;
+    transition: all 0.7s ease;
 }
 
+#cardEquipe:hover, #cardTrabalho:hover, #cardViagem:hover, #cardGaleria:hover {
+    transform: translateY(-20px);
+    cursor: pointer;
+    opacity: 1;
+    z-index: 2;
+}
 
+/* Cards hover effect: aumenta o card e reduz opacidade dos outros */
+.container-cards:hover .card {
+    opacity: 0.5;
+    transition: opacity 0.3s, transform 0.3s;
+}
+.container-cards .card:hover {
+    opacity: 1;
+    transform: scale(1.07);
+    z-index: 2;
+}
 
+.container-cards:hover > .card {
+    opacity: 0.5;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.container-cards:hover > .card:hover {
+    opacity: 1;
+    z-index: 3;
+}
 
 /* ====== TRABALHO PAGE ======== */
 .background-hero-header-trabalho{
@@ -426,10 +453,9 @@ header .container-header{
     .card{
         height: 600px !important;
     }
-    
-    #cardEquipe:hover, #cardTrabalho:hover, #cardViagem:hover, #cardGaleria:hover{
-        transform: translateY(-20px);
-        cursor: pointer;
+
+    .overlay-viagem{
+        display: none;
     }
    
 }
