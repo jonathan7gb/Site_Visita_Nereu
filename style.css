@@ -25,8 +25,16 @@
     max-width: 100%;
 }
 
+ul{
+    list-style: none;
+}
+
 body{
     background-color: var(--background-color);
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 button{
@@ -47,6 +55,10 @@ header{
 header .container-header{
     display: flex;
     justify-content: space-between;
+}
+
+.navbar-desktop{
+    display: none;
 }
 
 /* ========= HERO SECTION ======== */
@@ -160,6 +172,7 @@ header .container-header{
     background-size: cover;
     background-repeat: no-repeat;
     height: 25vh;
+    transition: all 1s ease;
 }
 
 .overlay-galeria{
@@ -180,6 +193,7 @@ header .container-header{
     background-size: cover;
     background-repeat: no-repeat;
     height: 25vh;
+    transition: all 1s ease;
 }
 
 .overlay-viagem{
@@ -208,6 +222,7 @@ header .container-header{
     background-size: cover;
     background-repeat: no-repeat;
     height: 25vh;
+    transition: all 1s ease;
 }
 
 #cardEquipe{
@@ -216,6 +231,7 @@ header .container-header{
     background-size: cover;
     background-repeat: no-repeat;
     height: 25vh;
+    transition: all 1s ease;
 }
 
 
@@ -273,4 +289,147 @@ header .container-header{
     border: 0;
     font-family: var(--font-darker-grotesque);
     font-size: var(--font-16px-1rem);
+}
+
+
+
+
+
+
+
+
+@media(min-width: 768px){
+    header{
+        padding: 1.5rem 3rem;
+    }
+
+    .hero-section .hero-title h1{
+        font-size: 3.5rem;
+    }
+
+    .hero-section .hero-title h1 #italia, #it, #ia{
+        font-size: 5rem !important;
+    }
+
+    .hero-section .down-arrow{
+        margin-top: 12rem;
+    }
+
+    .container-cards{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 400px auto;
+        grid-template-areas: 
+        "galeria galeria galeria"
+        "viagem trabalho equipe";
+        gap: 1rem;
+        width: 90%;
+        justify-self: center;
+    }
+
+    .container-cards .card .card-text p{
+        font-size: 14px;
+    }
+
+    #cardGaleriaLink{
+        grid-area: galeria;
+        grid-column: 1/4;
+    }
+
+    #cardGaleria{
+        height: 100%;
+        width: 100%;
+    }
+
+    .overlay-final{
+        display: none;
+    }
+
+    .overlay-galeria {
+        margin-top: 2rem;
+        width: 50%;
+    }
+    
+    .overlay-viagem img{
+        height: 400px !important;
+    }
+}
+
+@media(min-width: 1024px){
+    header{
+        padding: 2rem 10rem;
+    }
+    .hamburger-menu-icon{
+        display: none;
+    }
+
+    .navbar-desktop{
+        display: flex;
+    }
+
+    .navbar-desktop ul{
+        display: flex;
+        flex-direction: row;
+        gap: 3rem;
+        color: var(--white);
+    }
+
+    .navbar-desktop ul li a{
+        color: var(--white);
+        text-decoration: none;
+        font-family: var(--font-darker-grotesque);
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+    .background-hero-header{
+        background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('./images/IMG_2728.HEIC') center 26%/cover no-repeat;
+        height: 100vh;
+    }
+
+    .gradient-overlay{
+        position: absolute;
+        top: 8rem;
+        left: -0rem;
+        width: 100%;
+        max-width: 100%;
+        z-index: 1;
+    }
+
+
+    .hero-title br{
+        display: none;
+    }
+
+    #brDesk{
+        display: flex;
+    }
+    .hero-section .down-arrow{
+        margin-top: 22rem;
+    }
+
+    .container-cards{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr) !important;
+        grid-template-areas: none;
+        width: 90%;
+        margin-top: 3rem;
+    }
+
+    #cardGaleriaLink{
+        grid-area: none;
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+
+    .card{
+        height: 600px !important;
+    }
+    
+    #cardEquipe:hover, #cardTrabalho:hover, #cardViagem:hover, #cardGaleria:hover{
+        transform: translateY(-20px);
+        cursor: pointer;
+    }
+   
 }
