@@ -14,7 +14,7 @@ JavaScript (JS): Para adicionar funcionalidades interativas, como galerias de fo
 --
 
 📁 Estrutura do Projeto<br>
-/
+/<br>
 ├── index.html                  # Página inicial do site.<br>
 ├── style.css                   # Folha de estilo principal.<br>
 ├── script.js                   # Arquivo JavaScript para interatividade.<br>
