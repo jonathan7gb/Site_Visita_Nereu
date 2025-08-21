@@ -29,6 +29,11 @@ body{
     background-color: var(--background-color);
 }
 
+button{
+    background-color: transparent;
+    border: 0;
+}
+
 /* ========= HEADER ======== */
 .background-hero-header{
     background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('./images/IMG_2728.HEIC') center/cover no-repeat;
@@ -211,4 +216,61 @@ header .container-header{
     background-size: cover;
     background-repeat: no-repeat;
     height: 25vh;
+}
+
+
+
+
+/* ====== TRABALHO PAGE ======== */
+.background-hero-header-trabalho{
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('./images/IMG_2722.HEIC') center/cover no-repeat;
+    height: 100vh;
+}
+
+#title-trabalho{
+    color: var(--primary-color);
+    font-size: 2.8rem;
+}
+
+.problema{
+    padding: 3rem 1rem !important;
+}
+
+.container-problema{
+    color: var(--white);
+    font-family: var(--font-darker-grotesque);
+}
+
+.container-problema h2{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.container-problema p{
+    font-weight: 400;
+    font-size: 16px;
+    text-align: justify;
+    margin-bottom: 0.5rem;
+}
+
+#text-hidden{
+    display: none;
+}
+
+#LeiaMaisButton{
+    color: var(--white);
+    text-decoration: underline;
+    background-color: transparent;
+    border: 0;
+    font-family: var(--font-darker-grotesque);
+    font-size: var(--font-16px-1rem);
+}
+
+#LeiaMenosButton{
+    color: var(--white);
+    text-decoration: underline;
+    background-color: transparent;
+    border: 0;
+    font-family: var(--font-darker-grotesque);
+    font-size: var(--font-16px-1rem);
 }
