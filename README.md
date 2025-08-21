@@ -15,15 +15,15 @@ Este é o repositório do nosso projeto de documentação da viagem de estudos a
 
 📁 Estrutura do Projeto<br>
 /<br>
-├── index.html                  # Página inicial do site.<br>
-├── style.css                   # Folha de estilo principal.<br>
-├── script.js                   # Arquivo JavaScript para interatividade.<br>
-├── pages/                      # Diretório para as páginas internas.<br>
-│   ├── galeria.html            # Galeria de fotos da viagem.<br>
-│   ├── trabalho.html           # Página sobre o trabalho e a pesquisa.<br>
-│   ├── viagem.html             # Documentação da experiência da viagem.<br>
-│   └── equipe.html             # Informações sobre os membros da equipe.<br>
-└── images/                     # Pasta para todas as imagens do projeto.<br>
+├── index.html                  
+├── style.css                   
+├── script.js                  
+├── pages/                     
+│   ├── galeria.html            
+│   ├── trabalho.html         
+│   ├── viagem.html             
+│   └── equipe.html           
+└── images/                    
 
 <hr>
 
