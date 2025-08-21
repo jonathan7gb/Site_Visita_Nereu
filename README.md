@@ -1,35 +1,45 @@
+📄 README - Projeto "Nereu Ramos: Uma Viagem no Tempo"
 Visão Geral
-Este é o repositório do projeto de documentação da nossa viagem de estudos ao bairro histórico de Nereu Ramos, em Jaraguá do Sul, SC. Nosso objetivo com este website é registrar e compartilhar a experiência de imersão na história e cultura do bairro, utilizando tecnologias web como HTML, CSS e JavaScript. O site serve como um diário interativo, apresentando fotos, textos e informações sobre os pontos de interesse visitados, as histórias aprendidas e as percepções do grupo.
+Este é o repositório do nosso projeto de documentação da viagem de estudos ao bairro histórico de Nereu Ramos, em Jaraguá do Sul, SC. Nosso objetivo é registrar e compartilhar a experiência de imersão na história e cultura do bairro através de um website interativo. O site serve como um diário digital, apresentando fotos, textos e informações sobre os pontos de interesse visitados, as histórias aprendidas e as percepções do grupo.
 
-Tecnologias Utilizadas
-HTML5: Estrutura fundamental de todas as páginas do site.
+--
 
-CSS3: Estilização visual, incluindo layout responsivo para diferentes dispositivos (desktop, tablet e mobile).
+🛠️ Tecnologias Utilizadas
+HTML5: Para a estruturação e o conteúdo de todas as páginas.
 
-JavaScript (JS): Funcionalidades interativas, como galerias de fotos, navegação dinâmica e animações.
+CSS3: Para a estilização visual, incluindo um layout responsivo que se adapta a desktops, tablets e smartphones.
 
-Estrutura do Projeto
+JavaScript (JS): Para adicionar funcionalidades interativas, como galerias de fotos, navegação dinâmica e animações.
+
+--
+
+📁 Estrutura do Projeto
 /
-├── index.html                  # Página inicial do site, a primeira a ser carregada.
-├── style.css                   # Folha de estilo principal que define o design e a aparência de todas as páginas.
-├── script.js                   # Arquivo JavaScript para funcionalidades interativas, como navegação ou animações.
-├── pages/                      # Diretório para as páginas internas do site.
-│   ├── galeria.html            # Galeria de fotos da viagem de estudos.
-│   ├── trabalho.html           # Página dedicada ao trabalho e aos resultados da pesquisa.
-│   ├── viagem.html             # Seção que documenta a experiência da viagem em si.
-│   └── equipe.html             # Informações sobre os integrantes do grupo e seus papéis no projeto.
-└── images/  
+├── index.html                  # Página inicial do site.
+├── style.css                   # Folha de estilo principal.
+├── script.js                   # Arquivo JavaScript para interatividade.
+├── pages/                      # Diretório para as páginas internas.
+│   ├── galeria.html            # Galeria de fotos da viagem.
+│   ├── trabalho.html           # Página sobre o trabalho e a pesquisa.
+│   ├── viagem.html             # Documentação da experiência da viagem.
+│   └── equipe.html             # Informações sobre os membros da equipe.
+└── images/                     # Pasta para todas as imagens do projeto.
 
--- 
-Como Visualizar o Projeto
-Abrir o link a direita na parte superior do projeto ou abrir o link: site-visita-nereu.vercel.app
+--
 
-Créditos
+▶️ Como Visualizar o Projeto
+Você pode visualizar o projeto diretamente em seu navegador através do link:
+
+site-visita-nereu.vercel.app
+
+--
+
+👥 Créditos
 Desenvolvimento: Jonathan Luis Uber
 
 Pesquisa, Conteúdo e Fotografia: Felippe Pansonato, Gabriel Lis, Gustavo Petry, Nicolas Salamon e Victor Santini
 
 Orientação: Zulemar e Edimara
 
-Contribuições
+🚀 Contribuições
 Este é um projeto de estudo e documentação. Futuras contribuições podem incluir a adição de novas seções, aprimoramentos de design ou novas funcionalidades interativas.
