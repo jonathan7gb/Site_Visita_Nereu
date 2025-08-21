@@ -1,6 +1,9 @@
 const btnLerMais = document.getElementById("LeiaMaisButton")
 const btnLerMenos = document.getElementById("LeiaMenosButton")
+
 const textHidden = document.getElementById("text-hidden")
+// Garante que o texto oculto esteja escondido ao carregar
+textHidden.style.display = "none";
 
 function esconderTexto(){
     if(textHidden.style.display === "none"){
