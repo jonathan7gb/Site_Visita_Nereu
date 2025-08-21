@@ -40,3 +40,5 @@ setupLeiaMaisMenos("LeiaMaisButton", "LeiaMenosButton", "text-hidden");
 setupLeiaMaisMenos("LeiaMaisButton2", "LeiaMenosButton2", "text-hidden2");
 setupLeiaMaisMenos("LeiaMaisButton3", "LeiaMenosButton3", "text-hidden3");
 setupLeiaMaisMenos("LeiaMaisButton4", "LeiaMenosButton4", "text-hidden4");
+
+AOS.init();

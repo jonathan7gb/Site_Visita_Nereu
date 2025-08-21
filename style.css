@@ -277,7 +277,7 @@ header .container-header{
 
 /* ====== TRABALHO PAGE ======== */
 .background-hero-header-trabalho{
-    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('./images/IMG_2722.HEIC') center/cover no-repeat;
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('./images/IMG_2722.HEIC') center 40%/cover no-repeat !important;
     height: 100vh;
 }
 
@@ -286,41 +286,21 @@ header .container-header{
     font-size: 2.8rem;
 }
 
-.problema{
+.problema, .objetivos{
     padding: 3rem 2.5rem !important;
 }
 
-.container-problema{
+.container-problema, .container-objetivos{
     color: var(--white);
     font-family: var(--font-darker-grotesque);
 }
 
-
-.hipoteses{
+.hipoteses, .justificativa{
     background-color: var(--primary-color);
     padding: 3rem 2.5rem !important;
 }
 
-.container-hipoteses{
-    font-family: var(--font-darker-grotesque);
-    color: black;
-}
-
-.objetivos{
-    padding: 3rem 2.5rem !important;
-}
-
-.container-objetivos{
-    color: var(--white);
-    font-family: var(--font-darker-grotesque);
-}
-
-.justificativa{
-    background-color: var(--primary-color);
-    padding: 3rem 2.5rem !important;
-}
-
-.container-justificativa{
+.container-hipoteses, .container-justificativa{
     font-family: var(--font-darker-grotesque);
     color: black;
 }
@@ -331,6 +311,10 @@ header .container-header{
 .container-justificativa h2{
     text-align: center;
     margin-bottom: 1rem;
+}
+
+.img-card{
+    display: none;
 }
 
 .container-problema p,
@@ -357,6 +341,7 @@ header .container-header{
     font-family: var(--font-darker-grotesque);
     font-size: var(--font-16px-1rem);
     margin-top: 0.5rem;
+    cursor: pointer;
 }
 
 #LeiaMaisButton2, #LeiaMenosButton2, #LeiaMaisButton4, #LeiaMenosButton4{
@@ -367,6 +352,12 @@ header .container-header{
     font-family: var(--font-darker-grotesque);
     font-size: var(--font-16px-1rem);
     margin-top: 0.5rem;
+    cursor: pointer;
+}
+
+#text-Button{
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -425,6 +416,13 @@ header .container-header{
     .overlay-viagem img{
         height: 400px !important;
     }
+
+    /* =========== TRABALHO PAGE =================== */
+    .problema, .objetivos, .hipoteses, .justificativa{
+        padding: 3rem 10rem !important;
+    }
+
+    
 }
 
 @media(min-width: 1024px){
@@ -532,6 +530,100 @@ header .container-header{
 
     .overlay-viagem{
         display: none;
+    }
+
+     /* =========== TRABALHO PAGE =================== */
+     #title-trabalho{
+        color: var(--primary-color);
+        font-size: 3.5rem;
+    }
+    .problema, .objetivos, .hipoteses, .justificativa{
+        padding: 4rem 15% !important;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .container-problema,
+    .container-objetivos{
+        width: 40%;
+        justify-self: start;
+        align-items: start;
+    }
+
+    .container-hipoteses,
+    .container-justificativa{
+        width: 40%;
+        order: -999;
+    }
+
+    .container-problema h2, 
+    .container-hipoteses h2,
+    .container-objetivos h2,
+    .container-justificativa h2{
+        text-align: start;
+        font-size: 3rem;
+        font-weight: 900;line-height: 1.1;
+    }
+
+    .container-problema p,
+    .container-hipoteses p,
+    .container-objetivos p,
+    .container-justificativa p{
+        text-align: justify;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.5;
+    }
+
+    .img-card{
+        background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('./images/IMG_2728.HEIC') center 26%/cover no-repeat;;
+        display: flex;
+        width: 50%;
+        height: 45vh;
+        border-radius: 8px;
+    }
+
+    .img-card2{
+        background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('./images/IMG_6317.heic') center/cover no-repeat;;
+        display: flex;
+        width: 50%;
+        height: 45vh;
+        border-radius: 8px;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.486);
+    }
+    
+    .img-card3{
+        background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('./images/IMG_6319.HEIC') center/cover no-repeat;;
+        display: flex;
+        width: 50%;
+        height: 45vh;
+        border-radius: 8px;
+    }
+    
+    .img-card4{
+        background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('./images/FullSizeRender\(2\).heic') center/cover no-repeat;;
+        display: flex;
+        width: 50%;
+        height: 45vh;
+        border-radius: 8px;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.486);
+    }
+
+    #text-hidden, #text-hidden2, #text-hidden3, #text-hidden4{
+        display: flex !important;
+        flex-direction: column;
+    }
+
+
+    #LeiaMaisButton, #LeiaMenosButton, #LeiaMaisButton3, #LeiaMenosButton4, button{
+       display: none !important;
+    }
+
+    #LeiaMaisButton2, #LeiaMenosButton2, #LeiaMaisButton4, #LeiaMenosButton4{
+        display: none !important;
     }
    
 }
