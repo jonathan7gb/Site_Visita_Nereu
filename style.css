@@ -44,6 +44,7 @@ button{
 
 /* ========= HEADER ======== */
 .background-hero-header{
+    position: relative;
     background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('./images/IMG_2728.HEIC') center/cover no-repeat;
     height: 100vh;
 }
@@ -108,9 +109,16 @@ header .container-header{
 }
 
 .hero-section .down-arrow{
-    margin-top: 16rem;
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    height: auto;
 }
 
 .gradient-overlay{
@@ -338,9 +346,6 @@ header .container-header{
         font-size: 5rem !important;
     }
 
-    .hero-section .down-arrow{
-        margin-top: 12rem;
-    }
 
     .container-cards{
         display: grid;
@@ -430,9 +435,6 @@ header .container-header{
 
     #brDesk{
         display: flex;
-    }
-    .hero-section .down-arrow{
-        margin-top: 22rem;
     }
 
     .container-cards{
