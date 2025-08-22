@@ -123,6 +123,19 @@ header .container-header{
     align-items: center;
     justify-content: center;
     height: auto;
+    animation: bounce 2s infinite; /* Aplica a animação de quicada */
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0); /* Posição normal */
+  }
+  40% {
+    transform: translateY(-10px); /* Move a seta 10px para cima */
+  }
+  60% {
+    transform: translateY(-5px); /* Move a seta 5px para cima */
+  }
 }
 
 .gradient-overlay{
@@ -277,7 +290,7 @@ header .container-header{
 
 /* ====== TRABALHO PAGE ======== */
 .background-hero-header-trabalho{
-    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('./images/IMG_2722.pngIMG_2728.png') center 40%/cover no-repeat !important;
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('./images/IMG_2722.png') center 40%/cover no-repeat !important;
     height: 100vh;
 }
 
@@ -569,15 +582,15 @@ header .container-header{
     .container-cards{
         display: grid;
         grid-template-columns: repeat(4, 1fr) !important;
-        grid-template-areas: none;
+        grid-template-areas: none !important;
         width: 90%;
         margin-top: 3rem;
     }
 
     #cardGaleriaLink{
-        grid-area: none;
-        grid-column: 1/2;
-        grid-row: 1/2;
+        grid-area: none !important;
+        grid-column: 1/2 !important;
+        grid-row: 1/2 !important;
     }
 
 
