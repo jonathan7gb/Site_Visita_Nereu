@@ -64,28 +64,3 @@ setupLeiaMaisMenos("LeiaMaisButton", "LeiaMenosButton", "text-hidden");
 setupLeiaMaisMenos("LeiaMaisButton2", "LeiaMenosButton2", "text-hidden2");
 setupLeiaMaisMenos("LeiaMaisButton3", "LeiaMenosButton3", "text-hidden3");
 setupLeiaMaisMenos("LeiaMaisButton4", "LeiaMenosButton4", "text-hidden4");
-
-AOS.init();
-window.addEventListener('load', function() {
-  AOS.init();
-});
-
-
-$(document).ready(function(){
-   $('.container-galeria-images').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        fade: true,
-        asNavFor: '.container-galeria-nav'
-    });
-
-    $('.container-galeria-nav').slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        asNavFor: '.container-galeria-images',
-        dots: true,
-        centerMode: true,
-        focusOnSelect: true
-    });
-});
