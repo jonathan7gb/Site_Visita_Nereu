@@ -540,6 +540,7 @@ header .container-header{
     .problema, .objetivos, .hipoteses, .justificativa{
         padding: 4rem 15% !important;
         display: flex;
+        perspective: 1000px; /* profundidade para efeito 3D nas imagens */
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
@@ -552,7 +553,7 @@ header .container-header{
         justify-self: start;
         align-items: start;
     }
-
+    
     .container-hipoteses,
     .container-justificativa{
         width: 40%;
@@ -567,7 +568,7 @@ header .container-header{
         font-size: 3rem;
         font-weight: 900;line-height: 1.1;
     }
-
+    
     .container-problema p,
     .container-hipoteses p,
     .container-objetivos p,
@@ -584,15 +585,17 @@ header .container-header{
         width: 50%;
         height: 45vh;
         border-radius: 8px;
+        transition: transform 0.5s ease; 
     }
-
-    .img-card2{
-        background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('./images/IMG_6317.heic') center/cover no-repeat;;
+    
+    .img-card2 {
+        background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('./images/IMG_6317.heic') center/cover no-repeat;
         display: flex;
         width: 50%;
         height: 45vh;
         border-radius: 8px;
         box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.486);
+        transition: transform 0.5s ease; 
     }
     
     .img-card3{
@@ -601,8 +604,9 @@ header .container-header{
         width: 50%;
         height: 45vh;
         border-radius: 8px;
+        transition: transform 0.5s ease; 
     }
-    
+
     .img-card4{
         background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('./images/FullSizeRender\(2\).heic') center/cover no-repeat;;
         display: flex;
@@ -610,8 +614,9 @@ header .container-header{
         height: 45vh;
         border-radius: 8px;
         box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.486);
+        transition: transform 0.5s ease; 
     }
-
+    
     #text-hidden, #text-hidden2, #text-hidden3, #text-hidden4{
         display: flex !important;
         flex-direction: column;

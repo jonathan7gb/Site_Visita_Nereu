@@ -15,8 +15,32 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.style.overflow = 'auto';
         });
     }
+
+
 });
 
+    // Rotação dinâmica para todas as imagens .img-card, .img-card2, .img-card3, .img-card4
+const imgCards = document.querySelectorAll('.img-card, .img-card2, .img-card3, .img-card4');
+imgCards.forEach(img => {
+    img.style.transform = 'perspective(1000px)'; // Garante que o perspective seja aplicado
+    img.addEventListener('mousemove', function(e) {
+        const rect = img.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        // Limita o ângulo para não exagerar
+        const maxAngle = 15;
+        const rotateY = Math.max(-maxAngle, Math.min(maxAngle, ((x - centerX) / centerX) * maxAngle));
+        const rotateX = Math.max(-maxAngle, Math.min(maxAngle, ((centerY - y) / centerY) * maxAngle));
+        img.style.transform = `perspective(1000px) rotateY(${rotateY}deg) rotateX(${rotateX}deg)`;
+    });
+
+    img.addEventListener('mouseleave', function() {
+        img.style.transform = 'perspective(1000px)';
+    });
+});
+    
 // Função genérica para todos os blocos Leia Mais/Ler Menos
 function setupLeiaMaisMenos(btnMaisId, btnMenosId, hiddenId) {
     const btnMais = document.getElementById(btnMaisId);
