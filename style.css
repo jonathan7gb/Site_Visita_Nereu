@@ -45,7 +45,7 @@ button{
 /* ========= HEADER ======== */
 .background-hero-header{
     position: relative;
-    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('./images/IMG_2728.HEIC') center/cover no-repeat;
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('./images/IMG_2728.png') center/cover no-repeat;
     height: 100vh;
 }
 
@@ -178,7 +178,7 @@ header .container-header{
 }
 
 #cardGaleria{
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('./images/IMG_2728.HEIC');
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('./images/IMG_2728.png');
     background-position: center 25%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -200,7 +200,7 @@ header .container-header{
 }
 
 #cardViagem{
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('./images/FullSizeRender\(1\).heic');
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('./images/FullSizeRender\(1\).pngIMG_2728.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -230,7 +230,7 @@ header .container-header{
 
 
 #cardTrabalho{
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('./images/IMG_6319.heic');
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('./images/IMG_6319.pngIMG_2728.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -239,7 +239,7 @@ header .container-header{
 }
 
 #cardEquipe{
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('./images/IMG_2728.HEIC');
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('./images/IMG_2728.png');
     background-position: center 25%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -277,7 +277,7 @@ header .container-header{
 
 /* ====== TRABALHO PAGE ======== */
 .background-hero-header-trabalho{
-    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('./images/IMG_2722.HEIC') center 40%/cover no-repeat !important;
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('./images/IMG_2722.pngIMG_2728.png') center 40%/cover no-repeat !important;
     height: 100vh;
 }
 
@@ -361,8 +361,65 @@ header .container-header{
 }
 
 
+/* ====== GALERIA PAGE ======== */
+.title-galeria{
+    padding: 1rem 1rem;
+    color: var(--primary-color);
+    font-family: var(--font-darker-grotesque);
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 900;
+}
 
 
+.galeria-images-section{
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.cardImg{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.cardImg p{
+    color: #E2E2E2;
+    text-align: center;
+    font-family: var(--font-cinzel);
+    letter-spacing: 1px;
+    font-size: 14px;
+    margin-top: 0.5rem;
+}
+
+.cardImg .image-card{
+    border-radius: 8px;
+    height: 50vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.cardImg .image-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.cardImg-nav{
+    height: 12vh;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.cardImg-nav img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
 
 @media(min-width: 768px){
     header{
@@ -487,7 +544,7 @@ header .container-header{
     }
 
     .background-hero-header{
-        background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('./images/IMG_2728.HEIC') center 26%/cover no-repeat;
+        background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('./images/IMG_2728.png') center 26%/cover no-repeat;
         height: 100vh;
     }
 
@@ -538,25 +595,24 @@ header .container-header{
         font-size: 3.5rem;
     }
     .problema, .objetivos, .hipoteses, .justificativa{
-        padding: 4rem 15% !important;
+        padding: 8rem 15% !important;
         display: flex;
         perspective: 1000px; /* profundidade para efeito 3D nas imagens */
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        gap: 3rem;
     }
 
     .container-problema,
     .container-objetivos{
-        width: 40%;
+        width: 50%;
         justify-self: start;
         align-items: start;
     }
     
     .container-hipoteses,
     .container-justificativa{
-        width: 40%;
+        width: 50%;
         order: -999;
     }
 
@@ -580,38 +636,38 @@ header .container-header{
     }
 
     .img-card{
-        background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('./images/IMG_2728.HEIC') center 26%/cover no-repeat;;
+        background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('./images/IMG_2728.png') center 26%/cover no-repeat;;
         display: flex;
-        width: 50%;
-        height: 45vh;
+        width: 45%;
+        height: 40vh;
         border-radius: 8px;
         transition: transform 0.5s ease; 
     }
     
     .img-card2 {
-        background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('./images/IMG_6317.heic') center/cover no-repeat;
+        background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('./images/IMG_6317.pngIMG_2728.png') center/cover no-repeat;
         display: flex;
-        width: 50%;
-        height: 45vh;
+        width: 45%;
+        height: 40vh;   
         border-radius: 8px;
         box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.486);
         transition: transform 0.5s ease; 
     }
     
     .img-card3{
-        background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('./images/IMG_6319.HEIC') center/cover no-repeat;;
+        background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('./images/IMG_6319.pngIMG_2728.png') center/cover no-repeat;;
         display: flex;
-        width: 50%;
-        height: 45vh;
+        width: 45%;
+        height: 40vh;   
         border-radius: 8px;
         transition: transform 0.5s ease; 
     }
 
     .img-card4{
-        background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('./images/FullSizeRender\(2\).heic') center/cover no-repeat;;
+        background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('./images/FullSizeRender\(2\).pngIMG_2728.png') center/cover no-repeat;;
         display: flex;
-        width: 50%;
-        height: 45vh;
+        width: 45%;
+        height: 40vh;   
         border-radius: 8px;
         box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.486);
         transition: transform 0.5s ease; 
