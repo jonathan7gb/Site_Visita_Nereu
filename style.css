@@ -200,7 +200,7 @@ header .container-header{
 }
 
 #cardViagem{
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('./images/FullSizeRender\(1\).pngIMG_2728.png');
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('./images/FullSizeRender\(1\).png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -230,7 +230,7 @@ header .container-header{
 
 
 #cardTrabalho{
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('./images/IMG_6319.pngIMG_2728.png');
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('./images/IMG_6319.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -452,8 +452,8 @@ header .container-header{
     }
 
     #cardGaleriaLink{
-        grid-area: galeria;
-        grid-column: 1/4;
+        grid-area: galeria !important;
+        grid-column: 1/4 !important;
     }
 
     #cardGaleria{
@@ -645,7 +645,7 @@ header .container-header{
     }
     
     .img-card2 {
-        background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('./images/IMG_6317.pngIMG_2728.png') center/cover no-repeat;
+        background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('./images/IMG_6317.png') center/cover no-repeat;
         display: flex;
         width: 45%;
         height: 40vh;   
@@ -655,7 +655,7 @@ header .container-header{
     }
     
     .img-card3{
-        background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('./images/IMG_6319.pngIMG_2728.png') center/cover no-repeat;;
+        background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('./images/IMG_6319.png') center/cover no-repeat;;
         display: flex;
         width: 45%;
         height: 40vh;   
@@ -664,7 +664,7 @@ header .container-header{
     }
 
     .img-card4{
-        background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('./images/FullSizeRender\(2\).pngIMG_2728.png') center/cover no-repeat;;
+        background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('./images/FullSizeRender\(2\).png') center/cover no-repeat;;
         display: flex;
         width: 45%;
         height: 40vh;   
