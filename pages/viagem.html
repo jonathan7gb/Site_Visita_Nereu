@@ -5,13 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visita Histórica</title>
     <link rel="icon" type="image/png" href="./images/italiaFlag.svg">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../menu_style.css">
-    
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 </head>
 <body>
-    
+     <div class="background-hero-header background-hero-header-viagem">
+        <div class="background-overlay background-overlay2">
+
+            <header>
+                <div class="container-header">
+                    <div class="house-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30" fill="rgba(255,255,255,1)"><path d="M20 20C20 20.5523 19.5523 21 19 21H5C4.44772 21 4 20.5523 4 20V11H1L11.3273 1.6115C11.7087 1.26475 12.2913 1.26475 12.6727 1.6115L23 11H20V20ZM18 19V9.15745L12 3.7029L6 9.15745V19H18ZM12 17L8.64124 13.6412C7.76256 12.7625 7.76256 11.3379 8.64124 10.4592C9.51992 9.58056 10.9445 9.58056 11.8232 10.4592L12 10.636L12.1768 10.4592C13.0555 9.58056 14.4801 9.58056 15.3588 10.4592C16.2374 11.3379 16.2374 12.7625 15.3588 13.6412L12 17Z"></path></svg>
+                    </div>
+
+                    <div class="hamburger-menu-icon">
+                        <button id="menuHamburger"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30" fill="rgba(255,255,255,1)"><path d="M3 4H21V6H3V4ZM9 11H21V13H9V11ZM3 18H21V20H3V18Z"></path></svg></button>
+                    </div>
+
+                    <div class="navbar-desktop">
+                        <ul>
+                            <li id="linkDesk"><a href="../index.html">Início</a></li>
+                            <li id="linkDesk"><a href="./galeria.html">Galeria</a></li>
+                            <li id="linkDesk"><a href="./viagem.html">Viagem</a></li>
+                            <li id="linkDesk"><a href="./trabalho.html">Trabalho</a></li>
+                            <li id="linkDesk"><a href="./equipe.html">Equipe</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+
+            <section class="hero-section">
+                <div class="container-hero">
+                    <div class="gradient-overlay"><img src="../images/Gradient-Hero.png" alt="Overlay Gradient"></div>
+                    <div class="hero-title">
+                        <h1 id="title-trabalho">ACOMPANHE COMO FOI NOSSA VISITA...</h1>
+                        <p>Conheça os detalhes da nossa visita e veja tudo o que encontramos</p>
+                    </div>
+
+                    <div class="down-arrow">
+                        <a href="#problema-container"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30" fill="rgba(255,255,255,1)"><path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"></path></svg></a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+
     <section class="menu-mobile" id="menuMobile" style="display: none;">
         <div class="container-menu-mobile">
             <div class="class-btnClose"><button id="btnClose"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x-icon lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button></div>
@@ -28,7 +69,10 @@
         </div>
     </section>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    
     <script src="../script.js"></script>
 </body>
 </html>

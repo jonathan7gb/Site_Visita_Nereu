@@ -49,6 +49,12 @@ button{
     height: 100vh;
 }
 
+.background-hero-header-viagem{
+    position: relative;
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('./images/IMG_2694.png') center/cover no-repeat;
+    height: 100vh;
+}
+
 header{
     padding: 1rem 1rem 1rem 1.5rem;
 }
@@ -433,6 +439,19 @@ header .container-header{
     object-fit: cover;
     object-position: center;
 }
+
+
+/* =========== VIAGEM PAGE ============ */
+.container-imigracao-italiana h2{
+    padding: 3rem 1rem 2rem 1rem;
+    color: var(--white);
+    font-family: var(--font-darker-grotesque);
+    text-align: center;
+    font-weight: 800;
+}
+
+
+
 
 @media(min-width: 768px){
     header{

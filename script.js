@@ -15,21 +15,63 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.style.overflow = 'auto';
         });
     }
-
-
 });
 
-    // Rotação dinâmica para todas as imagens .img-card, .img-card2, .img-card3, .img-card4
+$(document).ready(function(){
+    const slider = $('.imgsViagem');
+
+    slider.slick({
+        dots: true,           // bolinhas de navegação
+        infinite: true,       // loop infinito
+        speed: 500,           // velocidade transição
+        autoplay: true,       // passar sozinho
+        autoplaySpeed: 15000,
+        responsive: [
+            {
+                breakpoint: 768, // Quando a tela for 768px ou menor
+                settings: {
+                    slidesToShow: 1, // Mostra 1 slide
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 1024, // Quando a tela for 1024px ou menor
+                settings: {
+                    slidesToShow: 2, // Mostra 2 slides
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 9999, // Qualquer valor acima de 1024px
+                settings: {
+                    slidesToShow: 3, // Mostra 2 slides
+                    slidesToScroll: 3
+                }
+            }
+        ]   // tempo de cada slide
+    });
+    // Botão anterior
+    $('#back').on('click', function(){
+        slider.slick('slickPrev');
+    });
+
+    // Botão próximo
+    $('#next').on('click', function(){
+        slider.slick('slickNext');
+    });
+});
+
+
 const imgCards = document.querySelectorAll('.img-card, .img-card2, .img-card3, .img-card4');
 imgCards.forEach(img => {
-    img.style.transform = 'perspective(1000px)'; // Garante que o perspective seja aplicado
+    img.style.transform = 'perspective(1000px)';
     img.addEventListener('mousemove', function(e) {
         const rect = img.getBoundingClientRect();
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
         const centerX = rect.width / 2;
         const centerY = rect.height / 2;
-        // Limita o ângulo para não exagerar
+
         const maxAngle = 15;
         const rotateY = Math.max(-maxAngle, Math.min(maxAngle, ((x - centerX) / centerX) * maxAngle));
         const rotateX = Math.max(-maxAngle, Math.min(maxAngle, ((centerY - y) / centerY) * maxAngle));
@@ -64,3 +106,4 @@ setupLeiaMaisMenos("LeiaMaisButton", "LeiaMenosButton", "text-hidden");
 setupLeiaMaisMenos("LeiaMaisButton2", "LeiaMenosButton2", "text-hidden2");
 setupLeiaMaisMenos("LeiaMaisButton3", "LeiaMenosButton3", "text-hidden3");
 setupLeiaMaisMenos("LeiaMaisButton4", "LeiaMenosButton4", "text-hidden4");
+
