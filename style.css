@@ -480,6 +480,49 @@ header .container-header{
     object-position: center 20% !important;
 }
 
+#image-church2{
+    object-position: center 50% !important; 
+    object-fit: cover;
+}
+
+/* Carrossel de imagens para .images-problema */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+    z-index: 2;
+    padding: 2px 8px;
+    border-radius: 50%;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+
+.prev-btn {
+    left: 8px;
+}
+.next-btn {
+    right: 8px;
+}
+
 /* ================= EQUIPE PAGE ================= */
 .background-hero-header-equipe{
     background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('./images/FullSizeRender\(2\).png') center 26%/cover no-repeat !important;

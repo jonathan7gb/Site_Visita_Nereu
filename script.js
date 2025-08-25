@@ -17,51 +17,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-$(document).ready(function(){
-    const slider = $('.imgsViagem');
-
-    slider.slick({
-        dots: true,           // bolinhas de navegação
-        infinite: true,       // loop infinito
-        speed: 500,           // velocidade transição
-        autoplay: true,       // passar sozinho
-        autoplaySpeed: 15000,
-        responsive: [
-            {
-                breakpoint: 768, // Quando a tela for 768px ou menor
-                settings: {
-                    slidesToShow: 1, // Mostra 1 slide
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 1024, // Quando a tela for 1024px ou menor
-                settings: {
-                    slidesToShow: 2, // Mostra 2 slides
-                    slidesToScroll: 2
-                }
-            },
-            {
-                breakpoint: 9999, // Qualquer valor acima de 1024px
-                settings: {
-                    slidesToShow: 3, // Mostra 2 slides
-                    slidesToScroll: 3
-                }
-            }
-        ]   // tempo de cada slide
-    });
-    // Botão anterior
-    $('#back').on('click', function(){
-        slider.slick('slickPrev');
-    });
-
-    // Botão próximo
-    $('#next').on('click', function(){
-        slider.slick('slickNext');
-    });
-});
-
-
 const imgCards = document.querySelectorAll('.img-card, .img-card2, .img-card3, .img-card4');
 imgCards.forEach(img => {
     img.style.transform = 'perspective(1000px)';
@@ -81,6 +36,32 @@ imgCards.forEach(img => {
     img.addEventListener('mouseleave', function() {
         img.style.transform = 'perspective(1000px)';
     });
+});
+
+// Carrossel de imagens para todas as seções com .carousel-container
+const carousels = document.querySelectorAll('.carousel-container');
+carousels.forEach(carouselContainer => {
+    const track = carouselContainer.querySelector('.carousel-track');
+    const items = track.querySelectorAll('.carousel-item');
+    const prevBtn = carouselContainer.querySelector('.prev-btn');
+    const nextBtn = carouselContainer.querySelector('.next-btn');
+    let currentIndex = 0;
+
+    function updateCarousel() {
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex === 0) ? items.length - 1 : currentIndex - 1;
+        updateCarousel();
+    });
+
+    nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex === items.length - 1) ? 0 : currentIndex + 1;
+        updateCarousel();
+    });
+
+    updateCarousel();
 });
     
 // Função genérica para todos os blocos Leia Mais/Ler Menos
