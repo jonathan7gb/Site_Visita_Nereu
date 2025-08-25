@@ -458,7 +458,7 @@ header .container-header{
 
 .images-problema{
     width: 100%;
-    height: 250px;
+    height: 25vh;
     max-width: 100%;
     display: flex;
     justify-content: center;
