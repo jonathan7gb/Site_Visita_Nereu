@@ -56,7 +56,7 @@ button{
 }
 
 header{
-    padding: 1rem 1rem 1rem 1.5rem;
+    padding: 1.5rem 1.5rem 1rem 1.5rem;
 }
 
 header .container-header{
@@ -114,7 +114,7 @@ header .container-header{
     color: #E2E2E2;
     text-align: center;
     width: 90%;
-    justify-self: center;
+    justify-self: center !important;
     font-weight: 300;
 }
 
@@ -451,8 +451,99 @@ header .container-header{
 }
 
 
+/* ================= EQUIPE PAGE ================= */
+.background-hero-header-equipe{
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('./images/FullSizeRender\(2\).png') center 26%/cover no-repeat !important;
+    height: 100vh;
+}
+
+.integrantes-section{ 
+    padding: 3rem 1rem;
+    color: var(--white);
+    font-family: var(--font-darker-grotesque);
+}
+
+.container-integrantes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-integrantes h2{
+    margin-bottom: 2rem;
+}
+
+.cards-integrantes{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.cards-integrantes .cardIntegrante{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.8rem;
+    padding: 1rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+}
+
+.cards-integrantes .cardIntegrante .top-part-card{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    text-align: left;
+    width: 100%;
+    gap: 1rem;
+}
+
+.cards-integrantes .cardIntegrante .top-part-card .top-part-image{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.cards-integrantes .cardIntegrante .top-part-card h3{
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.cards-integrantes .cardIntegrante .top-part-card p{
+    font-size: 16px;
+    font-weight: 300;
+    font-family: var(--font-lato);
+    color: rgb(185, 183, 183);
+}
+
+.cards-integrantes .cardIntegrante .bottom-part-card p{
+    font-size: 18px;
+    font-weight: 300;
+    font-family: var(--font-lato);
+    color: rgb(185, 183, 183);
+    text-align: left;
+}
+
+.cards-integrantes .cardIntegrante .social-medias{
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.cards-integrantes .cardIntegrante .icons-social-media{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-self: start;
+    align-items: start;
+}
 
 
+
+/* ================= MEDIA QUERIES ================= */
 @media(min-width: 768px){
     header{
         padding: 1.5rem 3rem;
@@ -719,4 +810,26 @@ header .container-header{
         display: none !important;
     }
    
+
+    /* =========== EQUIPE PAGE ============ */
+    .background-hero-header-equipe{
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('./images/FullSizeRender\(2\).png') center/cover no-repeat !important;
+    height: 100vh;
+}
+    
+    .cards-integrantes{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 2rem;
+
+    }
+
+    .cards-integrantes .cardIntegrante .icons-social-media a{
+        transition: all 0.7s ease !important;
+        transition: all 1.5 s ease-out !important;
+    }
+
+    .cards-integrantes .cardIntegrante .icons-social-media a:hover{
+        transform: scale(1.2);
+    }
 }
