@@ -258,7 +258,7 @@ header .container-header{
 }
 
 #cardEquipe{
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('./images/IMG_2728.png');
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('./images/FotoDaEquipe.jpg');
     background-position: center 25%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -525,7 +525,7 @@ header .container-header{
 
 /* ================= EQUIPE PAGE ================= */
 .background-hero-header-equipe{
-    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('./images/FullSizeRender\(2\).png') center 26%/cover no-repeat !important;
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('./images/FotoDaEquipe.jpg') center 26%/cover no-repeat !important;
     height: 100vh;
 }
 
@@ -916,6 +916,7 @@ header .container-header{
         display: grid;
         grid-template-columns: repeat(3, 1fr) !important;
         gap: 2rem;
+        width: 90%;
 
     }
 
