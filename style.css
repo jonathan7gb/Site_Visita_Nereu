@@ -905,6 +905,10 @@ header .container-header{
         background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('./images/FullSizeRender\(1\).png') center/cover no-repeat;;
     }
 
+    .hipoteses p, .problema p, .justificativa p, .objetivos p{
+        font-size: 18px !important;
+    }
+
 
     /* =========== EQUIPE PAGE ============ */
     .background-hero-header-equipe{
