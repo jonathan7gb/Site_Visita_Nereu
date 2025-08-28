@@ -390,56 +390,69 @@ header .container-header{
     font-weight: 900;
 }
 
-
 .galeria-images-section{
-    gap: 1.5rem;
     padding: 1rem;
 }
 
-.cardImg{
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+.container-galeria-images{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-columns: auto;
+    align-items: center;
+    gap: 0.3rem;
 }
 
-.cardImg p{
-    color: #E2E2E2;
-    text-align: center;
-    font-family: var(--font-cinzel);
-    letter-spacing: 1px;
-    font-size: 14px;
-    margin-top: 0.5rem;
-}
 
-.cardImg .image-card{
-    border-radius: 8px;
-    height: 50vh;
+.img {
     width: 100%;
-    overflow: hidden;
+    height: 100%;
+    object-fit: cover;
 }
 
-.cardImg .image-card img{
+.img img{
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
-}
-
-
-.cardImg-nav{
-    height: 12vh;
-    width: 100%;
-    overflow: hidden;
     border-radius: 5px;
 }
 
-.cardImg-nav img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
+#img1{
+    grid-column: 1 / 3 !important;
+    height: 350px;
 }
 
+#img6{
+    grid-column: 1 / 3 !important;
+    height: 350px;
+}
+
+#img11{
+    grid-column: 1 / 3 !important;
+    height: 350px;
+}
+
+#img16{
+    grid-column: 1 / 3 !important;
+    height: 350px;
+}
+
+.texto1{
+    grid-column: 1 / 3 !important;
+    height: 20px;
+    color: var(--white);
+    font-family: var(--font-cinzel);
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.texto2{
+    height: 20px;
+    color: var(--white);
+    font-family: var(--font-cinzel);
+    font-size: 0.8rem;
+    text-align: center;
+}
 
 /* =========== VIAGEM PAGE ============ */
 .background-hero-header-viagem{
@@ -674,7 +687,19 @@ header .container-header{
         padding: 3rem 10rem !important;
     }
 
-    
+    /* =========== GALERIA PAGE =================== */
+
+    .img{
+        height: 400px;
+    }
+
+    #img11{
+        height: 800px;
+    }
+
+    #img16{
+        height: 800px;
+    }
 }
 
 @media(min-width: 1024px){
@@ -912,24 +937,136 @@ header .container-header{
 
     /* =========== EQUIPE PAGE ============ */
     .background-hero-header-equipe{
-    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('./images/FullSizeRender\(2\).png') center/cover no-repeat !important;
-    height: 100vh;
-}
+        background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('./images/FullSizeRender\(2\).png') center/cover no-repeat !important;
+        height: 100vh;
+    }
     
     .cards-integrantes{
         display: grid;
         grid-template-columns: repeat(3, 1fr) !important;
         gap: 2rem;
         width: 90%;
-
+        
     }
-
+    
     .cards-integrantes .cardIntegrante .icons-social-media a{
         transition: all 0.7s ease !important;
         transition: all 1.5 s ease-out !important;
     }
-
+    
     .cards-integrantes .cardIntegrante .icons-social-media a:hover{
         transform: scale(1.2);
     }
+
+    /* =========== GALERIA PAGE ============ */
+
+    .title-galeria{
+        font-size: 2rem !important;
+        padding: 1.5rem 0rem !important;
+    }
+
+    .galeria-images-section{
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        justify-self: center;
+    }
+
+    .container-galeria-images{
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 0.5rem;
+    }
+    
+    .texto1, .texto2{
+        display: none;
+    }
+
+    .img{
+        height: 500px !important;
+    }
+
+    .img p{
+        font-family: var(--font-darker-grotesque) !important;
+        display: flex;
+        font-size: 1.5rem;
+        color: var(--white);
+        font-weight: 600;
+        height: 100%;
+        align-items: end;
+        padding: 1rem;
+    }
+    
+     #img1{
+        background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.6)), url('./images/FullSizeRender\(1\).png') center/cover no-repeat !important;
+        border-radius: 5px;
+    }
+    
+    
+    #img1 img{
+        display: none;
+    } 
+    
+    #img4{
+        grid-column: 2 / 4 !important;
+        background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.6)), url('./images/FullSizeRender.png') center/cover no-repeat !important;
+        border-radius: 5px;
+    }
+    
+    #img4 img{
+        display: none;
+    }
+    
+    #img5{
+        background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.6)), url('./images/IMG_2686.png') center/cover no-repeat !important;
+        grid-column: 1 / 3 !important;
+        border-radius: 5px;
+    }
+    
+    #img5 img{
+        display: none;
+    }
+    
+    #img6{
+        grid-column: 3 / 4 !important;
+    }
+    
+    #img10 {
+        height: 750px !important;
+    }
+    
+    #img11 {
+        background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.6)), url('./images/IMG_2694.png') center/cover no-repeat !important;
+        border-radius: 5px;
+        grid-column: 2 / 4 !important;
+        height: 750px !important;
+    }
+    
+    #img11 img{
+        display: none;
+    }
+    
+    #img15 {
+        background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.6)), url('./images/IMG_2722.png') center/cover no-repeat !important;
+        grid-column: 1 / 3 !important;
+        height: 750px !important;
+    }
+    
+    #img15 img{
+        display: none;
+    }
+    
+    #img16{
+        grid-column: 3 / 4 !important;
+        height: 750px !important;
+    }
+    
+    #img18{
+        background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.6)), url('./images/IMG_6319.png') center/cover no-repeat !important;
+        grid-column: 2 / 4 !important;
+    }
+
+    #img18 img{
+        display: none;
+    }
+    
 }
