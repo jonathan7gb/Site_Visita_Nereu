@@ -996,14 +996,14 @@ header .container-header{
     /* =========== GALERIA PAGE ============ */
 
     .title-galeria{
-        font-size: 2rem !important;
-        padding: 1.5rem 0rem !important;
+        font-size: 1.5rem !important;
+        padding: 1.5rem 1rem !important;
     }
 
     .galeria-images-section{
         display: flex;
         flex-direction: column;
-        width: 70%;
+        width: 90%;
         justify-self: center;
     }
 
@@ -1104,4 +1104,19 @@ header .container-header{
         display: none;
     }
     
+}
+
+@media (min-width: 1500px){
+    .title-galeria{
+        font-size: 1.8rem !important;
+        padding: 1.5rem 1rem !important;
+    }
+
+
+    .galeria-images-section{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        justify-self: center;
+    }
 }
