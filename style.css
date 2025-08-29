@@ -286,6 +286,7 @@ header .container-header{
     font-size: 2.8rem;
 }
 
+
 .problema, .objetivos{
     padding: 3rem 2.5rem !important;
 }
@@ -353,6 +354,17 @@ header .container-header{
     font-size: var(--font-16px-1rem);
     margin-top: 0.5rem;
     cursor: pointer;
+}
+
+.section-work{
+    opacity: 0;
+    scale: 0.5;
+    transition: all 0.7s ease;
+}
+
+.section-work.show{
+    opacity: 1 !important;
+    scale: 1 !important;
 }
 
 #text-Button{

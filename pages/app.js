@@ -20,3 +20,6 @@ cardsIntegrante.forEach(card => observer.observe(card))
 
 const cardInicio = document.querySelectorAll(".card")
 cardInicio.forEach(card => observer.observe(card))
+
+const section_work = document.querySelectorAll(".section-work")
+section_work.forEach(section => observer.observe(section))
