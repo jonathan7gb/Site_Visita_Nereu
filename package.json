@@ -1,0 +1,31 @@
+{
+  "name": "site-visita-nereu",
+  "version": "1.0.0",
+  "description": "Interactive website documenting a historical study trip to Nereu Ramos neighborhood in Jaraguá do Sul, Brazil. Features photo galleries, travel details, and educational content about Italian heritage in the region.",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "serve": "python3 -m http.server 8000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonathan7gb/Site_Visita_Nereu.git"
+  },
+  "keywords": [
+    "history",
+    "education",
+    "brazil",
+    "italian-heritage",
+    "website",
+    "documentation",
+    "jaraguá-do-sul",
+    "nereu-ramos",
+    "photo-gallery"
+  ],
+  "author": "Jonathan Luis Uber",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jonathan7gb/Site_Visita_Nereu/issues"
+  },
+  "homepage": "https://site-visita-nereu.vercel.app"
+}
